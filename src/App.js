@@ -1,10 +1,16 @@
 import React from 'react';
 import CardList from './CardList';
-import {Robots} from './Robots';
+import searchBox from './searchBox';
+import { Robots } from './Robots';
 
 
 const App = () => {
     return (
-        <CardList Robots = {Robots} />
+        <div>
+            <h1>RoboFriends</h1>
+            <searchBox />
+            <CardList Robots={Robots} />
+        </div>
     );
 }
+export default App;
