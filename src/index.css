@@ -2,49 +2,34 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  -ms-background:linear-gradient(to right, whitesmoke, pink);
-    -webkit-background: linear-gradient(to right, whitesmoke, pink);
-    -moz-background: linear-gradient(to right, whitesmoke, pink);
-    background: linear-gradient(to right, whitesmoke, pink);
+  -ms-background:linear-gradient(to right, darkblue, lightblue);
+    -webkit-background: linear-gradient(to right, darkblue, lightblue);
+    -moz-background: linear-gradient(to right, darkblue, lightblue);
+    background: linear-gradient(to right, darkblue, lightblue);
 }
 h1{
-  animation:3s flip infinite;
+  animation:
+  pulse 3s ease infinite alternate,
+  nudge 5s linear infinite alternate;
+  border: 10px;
+  margin: 2px;
+  padding: 2px;
+  border-radius: 100px;
 }
+@keyframes pulse {
+  0%, 100%{
 
-@keyframes flip {
-  from {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+  }80% {
+  
   }
-
-  40% {
-    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
-    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+}
+@keyframes nudge {
+  0%, 100% {
+    transform: translate(0, 0);
   }
-
-  50% {
-    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
-    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
   80% {
-    -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95);
-    transform: perspective(400px) scale3d(0.95, 0.95, 0.95);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-
-  to {
-    -webkit-transform: perspective(400px);
-    transform: perspective(400px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
+    transform: translate(-100PX, 0);
   }
 }
+
 
