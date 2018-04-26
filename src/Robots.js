@@ -58,6 +58,18 @@ export const Robots = [
         name: 'knife spill',
         username: 'metaheat',
         email: 'meta@gmail.com'
+    },
+    {
+        id: 11,
+        name: 'melina rough',
+        username: 'spilldown',
+        email: 'melina@gmail.com'
+    },
+    {
+        id: 12,
+        name: 'oseter wrench',
+        username: 'hopper',
+        email: 'oseter@gmail.com'
     }
 
 ];
