@@ -15,6 +15,7 @@ h1{
   margin: 2px;
   padding: 2px;
   border-radius: 100px;
+
 }
 @keyframes pulse {
   0%, 100%{
@@ -30,6 +31,5 @@ h1{
   80% {
     transform: translate(-100PX, 0);
   }
+
 }
-
-
