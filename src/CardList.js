@@ -8,7 +8,9 @@ const CardList = ({Robots}) => {
         id={Robots[i].id} 
         name={Robots[i].name} 
         username={Robots[i].username} 
-        email={Robots[i].email} />);
+        email={Robots[i].email}
+         />
+         );
     })
     return (<div>
         {cardsArray}
