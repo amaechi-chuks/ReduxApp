@@ -10,7 +10,9 @@ const Card = (props) => {
                 <p>{username}</p>
                 <p>{email}</p>
             </div>
+         
         </div>
+        
     );
 }
 export default Card;
