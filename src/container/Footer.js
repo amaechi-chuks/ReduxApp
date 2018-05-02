@@ -20,11 +20,10 @@ const Footer = () => {
                     <a href=""><i className="fa fa-2x fa-vimeo-square"></i></a>
                     <a href=""><i className="fa fa-2x fa-pinterest-square"></i></a>
                     <a href=""><i className="fa fa-2x fa-linkedin-square"></i></a>
+                    <a href=""><i className="fa fa-2x fa-skype-square"></i></a>
                 </div>
             </div>
         </div>
-
-
     );
 }
 export default Footer;
