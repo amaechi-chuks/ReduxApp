@@ -7,17 +7,17 @@ import Scroll from '../components/Scroll';
 import Footer from '../container/Footer';
 import '../container/App.css';
 import { setSearchField } from '../actions';
+import { searchRobots } from '../reducers';
 
 const mapStateToProps = state => {
     return {
-        searchField: state.searchField
+        searchField: state.searchRobots.searchField
     }
-
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
+        onSearchChange: (event) => dispatch(setSearchField(event.target.value))
     }
 }
 class App extends Component {
