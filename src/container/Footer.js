@@ -6,21 +6,15 @@ const Footer = () => {
         <div className="container text-center">
             <div className="row">
                 <div className="col-md-5">
-                    <li>&copy;  2005-2018 Amaechi</li>
+                    <li> Copyright&copy; 2018 Amaechi Chuks</li>
                     <div className='space'>
-                        <li> Contact Us</li>
+                        <li> Contact Me</li>
                         <li>About</li>
                     </div>
                 </div>
-                <div className="col-md-5" id="social-networks">
-                    <a href=""><i className="fa fa-2x fa-facebook-square"></i></a>
-                    <a href=""><i className="fa fa-2x fa-twitter-square"></i></a>
-                    <a href=""><i className="fa fa-2x fa-google-plus-square"></i></a>
-                    <a href=""><i className="fa fa-2x fa-youtube-square"></i></a>
-                    <a href=""><i className="fa fa-2x fa-vimeo-square"></i></a>
-                    <a href=""><i className="fa fa-2x fa-pinterest-square"></i></a>
-                    <a href=""><i className="fa fa-2x fa-linkedin-square"></i></a>
-                    <a href=""><i className="fa fa-2x fa-skype-square"></i></a>
+                <div className="col-md-5" id="social-networks">  
+                    <a href="https://twitter.com/chuks022"><em className="fa fa-2x fa-twitter-square"></em></a>
+                    <a href="https://www.linkedin.com/in/chuks-amaechi-1870a2156/"><em className="fa fa-2x fa-linkedin-square"></em></a>
                 </div>
             </div>
         </div>
