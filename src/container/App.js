@@ -6,43 +6,38 @@ import { Robots } from '../container/Robots';
 import Scroll from '../components/Scroll';
 import Footer from '../container/Footer';
 import '../container/App.css';
-import { setSearchField } from '../actions';
-import { searchRobots } from '../reducers';
+import { setSearchField, requestRobots } from '../actions';
+
 
 const mapStateToProps = state => {
     return {
-        searchField: state.searchRobots.searchField
+        searchField: state.searchRobots.searchField,
+        robots:state.requestRobots.robots,
+        ispending: state.requestRobots.ispending,
+        error: state.requestRobots.error
+        
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onSearchChange: (event) => dispatch(setSearchField(event.target.value))
+        onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
+        onRequestRobots: () => dispatch(requestRobots())
     }
 }
 class App extends Component {
     //smart component
-    constructor() {
-        super()
-        this.state = {
-            Robots: []
-            
-        }
-    }
     componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(response => response.json())
-            .then(users => { this.setState({ Robots: Robots }) });
+        this.props.onRequestRobots();
     }
     
     //the display component
     render() {
-        const { Robots } = this.state;
-        const { searchField, onSearchChange} = this.props;
+        const { searchField, onSearchChange, ispending} = this.props;
         const filteredRobots = Robots.filter(Robots => {
             return Robots.name.toLowerCase().includes(searchField.toLowerCase());
         });
-        return !Robots.length ?
+        return ispending ?
             <h1> onLoading </h1> :
             (
                 <div className='tc'>
